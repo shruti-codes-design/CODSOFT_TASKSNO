@@ -11,6 +11,7 @@ PROTOCOLS = {
     17: "UDP"
 }
 
+packet_count = 0
 
 # -----------------------------
 # Packet Processing Function
@@ -19,11 +20,15 @@ def packet_callback(packet):
 
     if packet.haslayer(IP):
 
+        global packet_count
+        packet_count += 1
+
         protocol = PROTOCOLS.get(packet[IP].proto, "Other")
         current_time = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
         print("=" * 60)
-        print("NETWORK PACKET")
+        print("Packet #", packet_count)
+        print("=" *60)
         print(f"Time             : {current_time}")
 
         print(f"Source IP        : {packet[IP].src}")
