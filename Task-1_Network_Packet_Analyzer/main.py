@@ -39,6 +39,22 @@ def packet_callback(packet):
             print(f"Destination Port : {packet[UDP].dport}")
 
         print(f"Packet Length    : {len(packet)} bytes")
+        with open("packet_log.txt", "a") as log_file:
+            log_file.write("=" * 60 + "\n")
+            log_file.write(f"Time             : {current_time}\n")
+            log_file.write(f"Source IP        : {packet[IP].src}\n")
+            log_file.write(f"Destination IP   : {packet[IP].dst}\n")
+            log_file.write(f"Protocol         : {protocol}\n")
+
+            if packet.haslayer(TCP):
+                log_file.write(f"Source Port      : {packet[TCP].sport}\n")
+                log_file.write(f"Destination Port : {packet[TCP].dport}\n")
+
+            elif packet.haslayer(UDP):
+                log_file.write(f"Source Port      : {packet[UDP].sport}\n")
+                log_file.write(f"Destination Port : {packet[UDP].dport}\n")
+
+            log_file.write(f"Packet Length    : {len(packet)} bytes\n\n")
 
 
 # -----------------------------
