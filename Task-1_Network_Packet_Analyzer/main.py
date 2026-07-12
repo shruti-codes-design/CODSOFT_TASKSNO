@@ -27,8 +27,8 @@ def packet_callback(packet):
         current_time = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 
         print("=" * 60)
-        print("Packet #", packet_count)
-        print("=" *60)
+        print(f"Packet #{packet_count}")
+        print("=" * 60)
         print(f"Time             : {current_time}")
 
         print(f"Source IP        : {packet[IP].src}")
@@ -66,8 +66,43 @@ def packet_callback(packet):
 # Main Program
 # -----------------------------
 print("\nNetwork Packet Analyzer Started...")
-print("Capturing 5 packets...\n")
+print("Capturing packets...\n")
+print("=" * 60)
+print("Network Packet Analyzer")
+print("=" * 60)
+print("1. Capture TCP Packets")
+print("2. Capture UDP Packets")
+print("3. Capture ICMP Packets")
+print("4. Capture All Packets")
+print("5. Exit")
 
-sniff(prn=packet_callback, count=5)
+choice = input("Enter your choice (1-5): ")
+
+if choice == "1":
+    print("TCP selected")
+    packet_limit = int(input("Enter the number of packets to capture: "))
+    sniff(filter="tcp",prn = packet_callback, count=packet_limit)
+
+elif choice == "2":
+    print("UDP selected")
+    packet_limit = int(input("Enter the number of packets to capture: "))
+    sniff(filter="udp",prn = packet_callback, count=packet_limit)
+
+elif choice == "3":
+    print("ICMP selected")
+    packet_limit = int(input("Enter the number of packets to capture: "))
+    sniff(filter="icmp",prn = packet_callback, count=packet_limit)
+
+elif choice == "4":
+    print("All packets selected")
+    packet_limit = int(input("Enter the number of packets to capture: "))
+    sniff(prn = packet_callback, count=packet_limit)
+
+elif choice == "5":
+    print("Exiting...")
+    exit()
+
+else:
+    print("Invalid Choice")
 
 print("\nCapture Completed.")
