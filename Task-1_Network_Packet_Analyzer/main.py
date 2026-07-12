@@ -61,21 +61,54 @@ def packet_callback(packet):
 
             log_file.write(f"Packet Length    : {len(packet)} bytes\n\n")
 
+def show_menu():
+    print("\nNetwork Packet Analyzer Started...")
+    print("Capturing packets...\n")
+    print("=" * 60)
+    print("Network Packet Analyzer")
+    print("=" * 60)
+    print("1. Capture TCP Packets")
+    print("2. Capture UDP Packets")
+    print("3. Capture ICMP Packets")
+    print("4. Capture All Packets")
+    print("5. Exit")
 
+def get_packet_limit():
+    while True:
+        try:
+            packet_limit = int(input("Enter the number of packets: "))
+
+            if packet_limit > 0:
+                return packet_limit
+
+            else:
+                print("Please enter a number greater than 0.")
+
+        except ValueError:
+            print("Invalid input! Please enter a valid integer.")
+
+def start_capture(choice, packet_limit):
+    if choice == "1":
+        print("TCP selected")
+        sniff(filter="tcp", prn=packet_callback, count=packet_limit)
+
+    elif choice == "2":
+        print("UDP selected")
+        sniff(filter="udp", prn=packet_callback, count=packet_limit)
+
+    elif choice == "3":
+        print("ICMP selected")
+        sniff(filter="icmp", prn=packet_callback, count=packet_limit)
+
+    elif choice == "4":
+        print("All packets selected")
+        sniff(prn=packet_callback, count=packet_limit)
+              
 # -----------------------------
 # Main Program
 # -----------------------------
-print("\nNetwork Packet Analyzer Started...")
-print("Capturing packets...\n")
-print("=" * 60)
-print("Network Packet Analyzer")
-print("=" * 60)
-print("1. Capture TCP Packets")
-print("2. Capture UDP Packets")
-print("3. Capture ICMP Packets")
-print("4. Capture All Packets")
-print("5. Exit")
 
+show_menu()
 choice = input("Enter your choice (1-5): ")
 
 if choice == "5":
@@ -85,33 +118,8 @@ elif choice not in ["1", "2", "3", "4"]:
     print("Invalid Choice")
     exit()
 
-while True:
-    try:
-        packet_limit = int(input("Enter the number of packets: "))
+packet_limit = get_packet_limit()
 
-        if packet_limit > 0:
-            break
-
-        else:
-            print("Please enter a number greater than 0.")
-
-    except ValueError:
-        print("Invalid input! Please enter a valid integer.")
- 
-if choice == "1":
-    print("TCP selected")
-    sniff(filter="tcp",prn = packet_callback, count=packet_limit)
-
-elif choice == "2":
-    print("UDP selected")
-    sniff(filter="udp",prn = packet_callback, count=packet_limit)
-
-elif choice == "3":
-    print("ICMP selected")
-    sniff(filter="icmp",prn = packet_callback, count=packet_limit)
-
-elif choice == "4":
-    print("All packets selected")
-    sniff(prn = packet_callback, count=packet_limit)
+start_capture(choice, packet_limit)
 
 print("\nCapture Completed.")
