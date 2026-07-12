@@ -78,31 +78,40 @@ print("5. Exit")
 
 choice = input("Enter your choice (1-5): ")
 
+if choice == "5":
+    exit()
+
+elif choice not in ["1", "2", "3", "4"]:
+    print("Invalid Choice")
+    exit()
+
+while True:
+    try:
+        packet_limit = int(input("Enter the number of packets: "))
+
+        if packet_limit > 0:
+            break
+
+        else:
+            print("Please enter a number greater than 0.")
+
+    except ValueError:
+        print("Invalid input! Please enter a valid integer.")
+ 
 if choice == "1":
     print("TCP selected")
-    packet_limit = int(input("Enter the number of packets to capture: "))
     sniff(filter="tcp",prn = packet_callback, count=packet_limit)
 
 elif choice == "2":
     print("UDP selected")
-    packet_limit = int(input("Enter the number of packets to capture: "))
     sniff(filter="udp",prn = packet_callback, count=packet_limit)
 
 elif choice == "3":
     print("ICMP selected")
-    packet_limit = int(input("Enter the number of packets to capture: "))
     sniff(filter="icmp",prn = packet_callback, count=packet_limit)
 
 elif choice == "4":
     print("All packets selected")
-    packet_limit = int(input("Enter the number of packets to capture: "))
     sniff(prn = packet_callback, count=packet_limit)
-
-elif choice == "5":
-    print("Exiting...")
-    exit()
-
-else:
-    print("Invalid Choice")
 
 print("\nCapture Completed.")

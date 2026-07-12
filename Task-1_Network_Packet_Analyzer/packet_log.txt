@@ -1,23 +1,136 @@
 ============================================================
-Time             : 10-07-2026 22:12:41
-Source IP        : 192.168.1.40
-Destination IP   : 20.192.44.82
-Protocol         : TCP
-Source Port      : 51908
-Destination Port : 443
-Packet Length    : 85 bytes
-
-============================================================
-Time             : 10-07-2026 22:12:41
-Source IP        : 20.192.44.82
+Time             : 10-07-2026 22:19:05
+Source IP        : 140.82.112.22
 Destination IP   : 192.168.1.40
 Protocol         : TCP
 Source Port      : 443
-Destination Port : 51908
+Destination Port : 61020
+Packet Length    : 70 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:05
+Source IP        : 192.168.1.40
+Destination IP   : 224.0.0.22
+Protocol         : Other
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:06
+Source IP        : 192.168.1.42
+Destination IP   : 192.168.1.40
+Protocol         : UDP
+Source Port      : 5353
+Destination Port : 5353
+Packet Length    : 297 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:06
+Source IP        : 192.168.1.42
+Destination IP   : 224.0.0.22
+Protocol         : Other
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:22
+Source IP        : 192.168.1.40
+Destination IP   : 51.104.15.252
+Protocol         : TCP
+Source Port      : 52263
+Destination Port : 443
+Packet Length    : 172 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:22
+Source IP        : 192.168.1.40
+Destination IP   : 51.104.15.252
+Protocol         : TCP
+Source Port      : 52263
+Destination Port : 443
+Packet Length    : 8759 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:22
+Source IP        : 51.104.15.252
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 52263
 Packet Length    : 60 bytes
 
 ============================================================
-Time             : 10-07-2026 22:12:41
+Time             : 10-07-2026 22:19:22
+Source IP        : 51.104.15.252
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 52263
+Packet Length    : 60 bytes
+
+============================================================
+Time             : 10-07-2026 22:19:22
+Source IP        : 51.104.15.252
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 52263
+Packet Length    : 60 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:25
+Source IP        : 192.168.1.40
+Destination IP   : 103.55.88.21
+Protocol         : UDP
+Source Port      : 57984
+Destination Port : 53
+Packet Length    : 98 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:25
+Source IP        : 103.55.88.21
+Destination IP   : 192.168.1.40
+Protocol         : UDP
+Source Port      : 53
+Destination Port : 57984
+Packet Length    : 218 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:25
+Source IP        : 192.168.1.40
+Destination IP   : 140.82.113.22
+Protocol         : TCP
+Source Port      : 60945
+Destination Port : 443
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:26
+Source IP        : 140.82.113.22
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 60945
+Packet Length    : 70 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:26
+Source IP        : 192.168.1.40
+Destination IP   : 140.82.113.22
+Protocol         : TCP
+Source Port      : 60945
+Destination Port : 443
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:43
+Source IP        : 72.153.5.132
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 60954
+Packet Length    : 747 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:43
 Source IP        : 192.168.1.40
 Destination IP   : 51.104.15.252
 Protocol         : TCP
@@ -26,20 +139,302 @@ Destination Port : 443
 Packet Length    : 174 bytes
 
 ============================================================
-Time             : 10-07-2026 22:12:41
+Time             : 10-07-2026 22:21:43
 Source IP        : 192.168.1.40
 Destination IP   : 51.104.15.252
 Protocol         : TCP
 Source Port      : 52263
 Destination Port : 443
-Packet Length    : 5833 bytes
+Packet Length    : 16052 bytes
 
 ============================================================
-Time             : 10-07-2026 22:12:41
-Source IP        : 51.104.15.252
+Time             : 10-07-2026 22:21:43
+Source IP        : 192.168.1.40
+Destination IP   : 72.153.5.132
+Protocol         : TCP
+Source Port      : 60954
+Destination Port : 443
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:21:43
+Source IP        : 192.168.1.40
+Destination IP   : 20.192.44.82
+Protocol         : TCP
+Source Port      : 51908
+Destination Port : 443
+Packet Length    : 85 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:21
+Source IP        : 20.184.175.5
 Destination IP   : 192.168.1.40
 Protocol         : TCP
 Source Port      : 443
-Destination Port : 52263
+Destination Port : 53985
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:21
+Source IP        : 192.168.1.40
+Destination IP   : 20.184.175.5
+Protocol         : TCP
+Source Port      : 53985
+Destination Port : 443
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:21
+Source IP        : 192.168.1.40
+Destination IP   : 20.184.175.5
+Protocol         : TCP
+Source Port      : 53985
+Destination Port : 443
+Packet Length    : 571 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:21
+Source IP        : 192.168.1.42
+Destination IP   : 224.0.0.22
+Protocol         : Other
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:21
+Source IP        : 20.184.175.5
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 53985
+Packet Length    : 153 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:32
+Source IP        : 192.168.1.42
+Destination IP   : 224.0.0.22
+Protocol         : Other
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:33
+Source IP        : 192.168.1.40
+Destination IP   : 104.18.32.47
+Protocol         : TCP
+Source Port      : 56898
+Destination Port : 443
+Packet Length    : 6477 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:33
+Source IP        : 192.168.1.40
+Destination IP   : 104.18.32.47
+Protocol         : TCP
+Source Port      : 56898
+Destination Port : 443
+Packet Length    : 4530 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:33
+Source IP        : 104.18.32.47
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 56898
+Packet Length    : 60 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:33
+Source IP        : 104.18.32.47
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 56898
+Packet Length    : 60 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:38
+Source IP        : 192.168.1.40
+Destination IP   : 103.55.88.21
+Protocol         : UDP
+Source Port      : 53249
+Destination Port : 53
+Packet Length    : 92 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:38
+Source IP        : 103.55.88.21
+Destination IP   : 192.168.1.40
+Protocol         : UDP
+Source Port      : 53
+Destination Port : 53249
+Packet Length    : 215 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:38
+Source IP        : 192.168.1.40
+Destination IP   : 20.184.175.5
+Protocol         : TCP
+Source Port      : 53997
+Destination Port : 443
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:38
+Source IP        : 140.82.113.21
+Destination IP   : 192.168.1.40
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 53996
+Packet Length    : 70 bytes
+
+============================================================
+Time             : 10-07-2026 22:23:38
+Source IP        : 192.168.1.40
+Destination IP   : 140.82.113.21
+Protocol         : TCP
+Source Port      : 53996
+Destination Port : 443
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 12-07-2026 18:04:53
+Source IP        : 192.168.1.35
+Destination IP   : 224.0.0.22
+Protocol         : Other
+Packet Length    : 54 bytes
+
+============================================================
+Time             : 12-07-2026 18:04:53
+Source IP        : 52.182.141.63
+Destination IP   : 192.168.1.35
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 59501
+Packet Length    : 60 bytes
+
+============================================================
+Time             : 12-07-2026 18:04:53
+Source IP        : 192.168.1.35
+Destination IP   : 103.55.88.21
+Protocol         : UDP
+Source Port      : 53574
+Destination Port : 53
+Packet Length    : 92 bytes
+
+============================================================
+Time             : 12-07-2026 18:04:53
+Source IP        : 103.55.88.21
+Destination IP   : 192.168.1.35
+Protocol         : UDP
+Source Port      : 53
+Destination Port : 53574
+Packet Length    : 215 bytes
+
+============================================================
+Time             : 12-07-2026 18:04:53
+Source IP        : 192.168.1.35
+Destination IP   : 20.42.73.27
+Protocol         : TCP
+Source Port      : 62875
+Destination Port : 443
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 12-07-2026 18:14:27
+Source IP        : 192.168.1.35
+Destination IP   : 92.223.76.253
+Protocol         : TCP
+Source Port      : 65322
+Destination Port : 80
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 12-07-2026 18:14:27
+Source IP        : 92.223.76.253
+Destination IP   : 192.168.1.35
+Protocol         : TCP
+Source Port      : 80
+Destination Port : 65322
+Packet Length    : 2948 bytes
+
+============================================================
+Time             : 12-07-2026 18:14:27
+Source IP        : 192.168.1.35
+Destination IP   : 92.223.76.253
+Protocol         : TCP
+Source Port      : 65322
+Destination Port : 80
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 12-07-2026 18:14:27
+Source IP        : 92.223.76.253
+Destination IP   : 192.168.1.35
+Protocol         : TCP
+Source Port      : 80
+Destination Port : 65322
+Packet Length    : 1507 bytes
+
+============================================================
+Time             : 12-07-2026 18:14:27
+Source IP        : 192.168.1.35
+Destination IP   : 92.223.76.253
+Protocol         : TCP
+Source Port      : 65322
+Destination Port : 80
+Packet Length    : 66 bytes
+
+============================================================
+Time             : 12-07-2026 18:23:22
+Source IP        : 192.168.1.35
+Destination IP   : 172.64.155.209
+Protocol         : TCP
+Source Port      : 63157
+Destination Port : 443
+Packet Length    : 6736 bytes
+
+============================================================
+Time             : 12-07-2026 18:23:22
+Source IP        : 192.168.1.35
+Destination IP   : 172.64.155.209
+Protocol         : TCP
+Source Port      : 63157
+Destination Port : 443
+Packet Length    : 9842 bytes
+
+============================================================
+Time             : 12-07-2026 18:23:23
+Source IP        : 192.168.1.35
+Destination IP   : 103.55.88.21
+Protocol         : UDP
+Source Port      : 51926
+Destination Port : 53
+Packet Length    : 98 bytes
+
+============================================================
+Time             : 12-07-2026 18:23:23
+Source IP        : 103.55.88.21
+Destination IP   : 192.168.1.35
+Protocol         : UDP
+Source Port      : 53
+Destination Port : 51926
+Packet Length    : 218 bytes
+
+============================================================
+Time             : 12-07-2026 18:29:53
+Source IP        : 192.168.1.35
+Destination IP   : 20.192.44.82
+Protocol         : TCP
+Source Port      : 53857
+Destination Port : 443
+Packet Length    : 85 bytes
+
+============================================================
+Time             : 12-07-2026 18:29:53
+Source IP        : 20.192.44.82
+Destination IP   : 192.168.1.35
+Protocol         : TCP
+Source Port      : 443
+Destination Port : 53857
 Packet Length    : 60 bytes
 
