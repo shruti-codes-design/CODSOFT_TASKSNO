@@ -12,6 +12,9 @@ PROTOCOLS = {
 }
 
 packet_count = 0
+with open("packet_log.txt", "w") as log_file:
+    log_file.write("NETWORK PACKET ANALYZER LOG\n")
+    log_file.write("=" * 60 + "\n\n")
 
 # -----------------------------
 # Packet Processing Function
@@ -34,6 +37,7 @@ def packet_callback(packet):
         print(f"Source IP        : {packet[IP].src}")
         print(f"Destination IP   : {packet[IP].dst}")
         print(f"Protocol         : {protocol}")
+        print(f"Protocol Number  : {packet[IP].proto}")
 
         if packet.haslayer(TCP):
             print(f"Source Port      : {packet[TCP].sport}")
@@ -46,10 +50,12 @@ def packet_callback(packet):
         print(f"Packet Length    : {len(packet)} bytes")
         with open("packet_log.txt", "a") as log_file:
             log_file.write("=" * 60 + "\n")
+            log_file.write(f"Packet #{packet_count}\n")
             log_file.write(f"Time             : {current_time}\n")
             log_file.write(f"Source IP        : {packet[IP].src}\n")
             log_file.write(f"Destination IP   : {packet[IP].dst}\n")
             log_file.write(f"Protocol         : {protocol}\n")
+            log_file.write(f"Protocol Number  : {packet[IP].proto}\n")
 
             if packet.haslayer(TCP):
                 log_file.write(f"Source Port      : {packet[TCP].sport}\n")
@@ -59,19 +65,22 @@ def packet_callback(packet):
                 log_file.write(f"Source Port      : {packet[UDP].sport}\n")
                 log_file.write(f"Destination Port : {packet[UDP].dport}\n")
 
-            log_file.write(f"Packet Length    : {len(packet)} bytes\n\n")
+            print(f"Summary          : {packet.summary()}")
+
+            log_file.write(f"Packet Length    : {len(packet)} bytes\n")
+            log_file.write(f"Summary          : {packet.summary()}\n\n")
 
 def show_menu():
-    print("\nNetwork Packet Analyzer Started...")
-    print("Capturing packets...\n")
+    print("\n")
     print("=" * 60)
-    print("Network Packet Analyzer")
+    print("        NETWORK PACKET ANALYZER")
     print("=" * 60)
     print("1. Capture TCP Packets")
     print("2. Capture UDP Packets")
     print("3. Capture ICMP Packets")
     print("4. Capture All Packets")
     print("5. Exit")
+    print("=" * 60)
 
 def get_packet_limit():
     while True:
@@ -89,19 +98,19 @@ def get_packet_limit():
 
 def start_capture(choice, packet_limit):
     if choice == "1":
-        print("TCP selected")
+        print("\nCapturing TCP Packets...\n")
         sniff(filter="tcp", prn=packet_callback, count=packet_limit)
 
     elif choice == "2":
-        print("UDP selected")
+        print("\nCapturing UDP Packets...\n")
         sniff(filter="udp", prn=packet_callback, count=packet_limit)
 
     elif choice == "3":
-        print("ICMP selected")
+        print("\nCapturing ICMP Packets...\n")
         sniff(filter="icmp", prn=packet_callback, count=packet_limit)
 
     elif choice == "4":
-        print("All packets selected")
+        print("\nCapturing All Packets...\n")
         sniff(prn=packet_callback, count=packet_limit)
               
 # -----------------------------
@@ -120,6 +129,20 @@ elif choice not in ["1", "2", "3", "4"]:
 
 packet_limit = get_packet_limit()
 
-start_capture(choice, packet_limit)
+try:
+    start_capture(choice, packet_limit)
 
-print("\nCapture Completed.")
+except PermissionError:
+    print("Run VS Code as Administrator.")
+
+except KeyboardInterrupt:
+    print("\nCapture Stopped by User.")
+
+except Exception as e:
+    print("Error:", e)
+
+print("\n" + "=" * 60)
+print("Capture Completed Successfully!")
+print(f"Total Packets Captured : {packet_count}")
+print("Packet log saved as: packet_log.txt")
+print("=" * 60)
