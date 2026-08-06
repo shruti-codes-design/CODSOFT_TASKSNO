@@ -1,6 +1,10 @@
 from scapy.all import sniff
 from scapy.layers.inet import IP, TCP, UDP
 from datetime import datetime
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_FILE = os.path.join(BASE_DIR, "packet_log.txt")
 
 # -----------------------------
 # Protocol Dictionary
@@ -12,9 +16,9 @@ PROTOCOLS = {
 }
 
 packet_count = 0
-with open("packet_log.txt", "w") as log_file:
-    log_file.write("NETWORK PACKET ANALYZER LOG\n")
-    log_file.write("=" * 60 + "\n\n")
+with open(LOG_FILE, "a") as file:
+    file.write("NETWORK PACKET ANALYZER LOG\n")
+    file.write("=" * 60 + "\n\n")
 
 # -----------------------------
 # Packet Processing Function
@@ -48,7 +52,7 @@ def packet_callback(packet):
             print(f"Destination Port : {packet[UDP].dport}")
 
         print(f"Packet Length    : {len(packet)} bytes")
-        with open("packet_log.txt", "a") as log_file:
+        with open(LOG_FILE, "a") as log_file:
             log_file.write("=" * 60 + "\n")
             log_file.write(f"Packet #{packet_count}\n")
             log_file.write(f"Time             : {current_time}\n")

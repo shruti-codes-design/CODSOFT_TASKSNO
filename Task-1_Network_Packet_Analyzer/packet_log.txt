@@ -3,61 +3,64 @@ NETWORK PACKET ANALYZER LOG
 
 ============================================================
 Packet #1
-Time             : 02-08-2026 12:09:39
-Source IP        : 104.18.39.21
-Destination IP   : 192.168.1.36
+Time             : 06-08-2026 16:38:36
+Source IP        : 172.64.148.235
+Destination IP   : 192.168.1.35
 Protocol         : TCP
 Protocol Number  : 6
 Source Port      : 443
-Destination Port : 50725
+Destination Port : 55858
 Packet Length    : 78 bytes
-Summary          : Ether / IP / TCP 104.18.39.21:https > 192.168.1.36:50725 PA / Raw
+Summary          : Ether / IP / TCP 172.64.148.235:https > 192.168.1.35:55858 PA / Raw
 
 ============================================================
 Packet #2
-Time             : 02-08-2026 12:09:39
-Source IP        : 192.168.1.36
-Destination IP   : 104.18.39.21
+Time             : 06-08-2026 16:38:36
+Source IP        : 192.168.1.35
+Destination IP   : 172.64.148.235
 Protocol         : TCP
 Protocol Number  : 6
-Source Port      : 50725
+Source Port      : 55858
 Destination Port : 443
 Packet Length    : 82 bytes
-Summary          : Ether / IP / TCP 192.168.1.36:50725 > 104.18.39.21:https PA / Raw
+Summary          : Ether / IP / TCP 192.168.1.35:55858 > 172.64.148.235:https PA / Raw
+
+NETWORK PACKET ANALYZER LOG
+============================================================
+
+============================================================
+Packet #1
+Time             : 06-08-2026 16:41:00
+Source IP        : 192.168.1.35
+Destination IP   : 13.107.13.93
+Protocol         : TCP
+Protocol Number  : 6
+Source Port      : 58971
+Destination Port : 443
+Packet Length    : 54 bytes
+Summary          : Ether / IP / TCP 192.168.1.35:58971 > 13.107.13.93:https FA
+
+============================================================
+Packet #2
+Time             : 06-08-2026 16:41:00
+Source IP        : 13.107.13.93
+Destination IP   : 192.168.1.35
+Protocol         : TCP
+Protocol Number  : 6
+Source Port      : 443
+Destination Port : 58971
+Packet Length    : 54 bytes
+Summary          : Ether / IP / TCP 13.107.13.93:https > 192.168.1.35:58971 A
 
 ============================================================
 Packet #3
-Time             : 02-08-2026 12:09:39
-Source IP        : 104.18.39.21
-Destination IP   : 192.168.1.36
+Time             : 06-08-2026 16:41:00
+Source IP        : 13.107.13.93
+Destination IP   : 192.168.1.35
 Protocol         : TCP
 Protocol Number  : 6
 Source Port      : 443
-Destination Port : 50725
-Packet Length    : 60 bytes
-Summary          : Ether / IP / TCP 104.18.39.21:https > 192.168.1.36:50725 A / Padding
-
-============================================================
-Packet #4
-Time             : 02-08-2026 12:09:40
-Source IP        : 192.168.1.36
-Destination IP   : 20.37.198.118
-Protocol         : TCP
-Protocol Number  : 6
-Source Port      : 50775
-Destination Port : 443
-Packet Length    : 66 bytes
-Summary          : Ether / IP / TCP 192.168.1.36:50775 > 20.37.198.118:https S
-
-============================================================
-Packet #5
-Time             : 02-08-2026 12:09:40
-Source IP        : 20.37.198.118
-Destination IP   : 192.168.1.36
-Protocol         : TCP
-Protocol Number  : 6
-Source Port      : 443
-Destination Port : 50775
-Packet Length    : 66 bytes
-Summary          : Ether / IP / TCP 20.37.198.118:https > 192.168.1.36:50775 SA
+Destination Port : 58971
+Packet Length    : 54 bytes
+Summary          : Ether / IP / TCP 13.107.13.93:https > 192.168.1.35:58971 FA
 
